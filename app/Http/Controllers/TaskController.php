@@ -34,6 +34,21 @@ class TaskController extends Controller
         // Применение сортировки
         $query->orderBy($sortType[0], $sortType[1]);
 
+        // Фильтр по статусу is_completed
+        if ($request->has('is_completed')) {
+            $query->where('is_completed', $request->input('is_completed'));
+        }
+
+        // Фильтр по дате создания created_at
+        if ($request->has('created_at')) {
+            $query->whereDate('created_at', $request->input('created_at'));
+        }
+
+        // Фильтр по дате выполнения due_date
+        if ($request->has('due_date')) {
+            $query->whereDate('due_date', $request->input('due_date'));
+        }
+
         // Получение списка задач
         $tasks = $query->paginate($itemsOnPage);
 
