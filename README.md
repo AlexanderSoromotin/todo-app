@@ -62,6 +62,6 @@ php artisan serve
 Приложение будет доступно по адресу http://localhost:8000.
 
 ## Дополнительные ресурсы
-Коллекция запросов в Postman: [Google Drive](https://drive.google.com/file/d/1w2c2TUfuaExxto3F1Jz9lUjYP0EQVc4q/view?usp=sharing)
+Коллекция запросов в Postman: [Google Drive](https://drive.google.com/file/d/1hV7stMdvVfvJewXcAC0o_p2hibJMItub/view?usp=sharing)
 
 Среда переменных в Postman: [Google Drive](https://drive.google.com/file/d/1sy83rL0KH-qxuAVbFKqTwtw4KnB7JCdz/view?usp=sharing)
