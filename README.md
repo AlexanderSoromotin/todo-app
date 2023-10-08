@@ -15,10 +15,10 @@
 
 ## Установка
 
-1. Клонируйте репозиторий:
+1. Клонируйте репозиторий в новую директорию:
 
 ```bash
-https://github.com/AlexanderSoromotin/todo-app
+git clone https://github.com/AlexanderSoromotin/todo-app todo-app
 ```
 2. Перейдите в директорию проекта:
 ```bash
@@ -28,15 +28,26 @@ cd todo-app
 ```bash
 composer install
 ```
-4. Создайте файл .env на основе .env.example и настройте параметры базы данных и другие настройки:
+4. Создайте файл .env на основе .env.example:
 ```bash
 cp .env.example .env
 ```
-5. Cгенерируйте ключ приложения:
+6. Создайте новую базу данных в вашей СУБД:
+
+6. Настройте параметры базы данных внутри файла .env:
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=todo-app
+DB_USERNAME=root
+DB_PASSWORD=
+```
+7. Cгенерируйте ключ приложения:
 ```bash
 php artisan key:generate
 ```
-6. Выполните миграции базы данных:
+8. Выполните миграции базы данных:
 
 ```bash
 php artisan migrate
@@ -51,6 +62,6 @@ php artisan serve
 Приложение будет доступно по адресу http://localhost:8000.
 
 ## Дополнительные ресурсы
-Коллекция зпросов в Postman: [Google Drive](https://drive.google.com/file/d/1t7uTXsKEWJehslEnPcOQ82lOYHKUKCCp/view?usp=sharing)
+Коллекция запросов в Postman: [Google Drive](https://drive.google.com/file/d/1w2c2TUfuaExxto3F1Jz9lUjYP0EQVc4q/view?usp=sharing)
 
 Среда переменных в Postman: [Google Drive](https://drive.google.com/file/d/1sy83rL0KH-qxuAVbFKqTwtw4KnB7JCdz/view?usp=sharing)
